@@ -1,12 +1,12 @@
 import 'package:annotations/annotations.dart';
 
 // Step 1
-part 'product.g.dart'; //Should be same file name
+part 'product.json_generator.g.dart'; //Should be same file name
 
 
 // Step 2
-@customAnnotation
-class Product{
+@CustomAnnotation()
+class Product {
   final String name;
   final double price;
 

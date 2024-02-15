@@ -6,8 +6,9 @@ import 'package:source_gen/source_gen.dart';
 
 Builder generateJsonMethods(BuilderOptions options) {
   // Step 1
-  return SharedPartBuilder(
-    [JsonGenerator()], // Step 2
-    'json_generator', // Step 3
+  return LibraryBuilder(
+    JsonGenerator(), // Step 2
+    generatedExtension: '.json_generator.g.dart',
+    // 'json_generator',
   );
 }

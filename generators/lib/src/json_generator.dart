@@ -19,6 +19,8 @@ class JsonGenerator extends GeneratorForAnnotation<CustomAnnotation> {
     // Buffer to write each part of generated class
     final buffer = StringBuffer();
 
+    buffer.writeln("part of '${element.source?.shortName}';");
+
     // fromJson
     String generatedFromJSon = generateFromJsonMethod(visitor);
     buffer.writeln(generatedFromJSon);
